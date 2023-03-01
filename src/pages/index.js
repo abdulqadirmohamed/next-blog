@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Head from "next/head";
 
+import { Inter } from "next/font/google";
+import { Hero } from "@/components/Hero";
+import Africa from "@/components/Africa";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -15,14 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <div className='grid md:grid-cols-4 gap-4 mt-6'>
-          <div className='bg-red-500 p-5 md:col-span-2 row-span-3'>1</div>
-          <div className='bg-red-500 p-5'>2</div>
-          <div className='bg-red-500 p-5'>3</div>
-          <div className='bg-red-500 p-5'>4</div>
-          <div className='bg-red-500 p-5'>5</div>
-        </div>
+        <Hero />
+        <Africa />
       </main>
     </>
-  )
+  );
 }

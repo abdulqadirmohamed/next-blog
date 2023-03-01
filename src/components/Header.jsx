@@ -10,7 +10,7 @@ export const Header = () => {
         <header className='w-[90%] mx-auto text-white flex justify-between items-center'>
             <div>Logo</div>
             <nav className='flex gap-6'>
-                <Link href="/" className={(router.pathname == "/" ? "border-b-2 border-red-600 pb-2" : "")}>Home</Link>
+                <Link href="/" className={(router.pathname == "/" ? "border-b-2 border-red-600" : "")}>Home</Link>
                 <Link href="/technology" className={(router.pathname == "/technology" ? "border-b-2 border-red-600 " : "")}>Technology</Link>
                 <Link href="/social" className={(router.pathname == "/social" ? "border-b-2 border-red-600 " : "")}>Social</Link>
                 <Link href="/culture" className={(router.pathname == "/culture" ? "border-b-2 border-red-600 " : "")}>Culture</Link>
