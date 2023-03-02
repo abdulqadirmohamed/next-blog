@@ -27,15 +27,20 @@ const Africa = () => {
       </h1>
       <div className="grid md:grid-cols-4 gap-4">
         {africaNews.map((news) => (
-          <div className="relative">
-            <Image src={news.cover} alt="" width={500} height={500} />
-            <div className="mt-3">
+          <div className="relative h-80">
+            <div className="relative h-40 w-full">
+              <Image src={news.cover} fill />
+            </div>
+            <div className="mt-1">
               <h1 className="text-[20px] text-gray-700 font-bold leading-6">
                 {news.title}
               </h1>
               <p className="text-gray-600 leading-5 mt-2 text-[15px]">
                 {news.description}
               </p>
+              <span className="pl-3 absolute bottom-0 border-l-2 border-red-600  uppercase text-[12px] text-gray-700">
+                Africa
+              </span>
             </div>
           </div>
         ))}
