@@ -39,7 +39,7 @@ const Africa = () => {
                 {news.description}
               </p>
               <span className="pl-3 absolute bottom-0 border-l-2 border-red-600  uppercase text-[12px] text-gray-700">
-                Africa
+                africa
               </span>
             </div>
           </div>
