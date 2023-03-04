@@ -8,7 +8,7 @@ import Img5 from '../img/img5.jpg'
 
 export const Hero = () => {
   return (
-    <div>
+    <div className=''>
         <div className='grid md:grid-cols-4 md:gap-4 mt-6'>
           <div className='md:col-span-2 row-span-3 relative hover:opacity-90 bg-black cursor-pointer'>
             <Image src={Img1} alt="image"/>
