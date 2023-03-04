@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const AfricaCards = ({ cover, title, description }) => {
+export const AfricaCards = ({ cover, title, description, slug }) => {
   return (
     <div>
       <div className="relative h-80 group">
-        <Link href={title} className="cursor-pointer">
+        <Link href={slug} className="cursor-pointer">
           <div className="relative h-40 w-full group-hover:opacity-90">
             <Image src={cover} fill className="object-cover" alt={title} />
           </div>

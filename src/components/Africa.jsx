@@ -12,6 +12,7 @@ const Africa = () => {
       id: 1,
       cover: img6,
       title: "Exploring the rigging claims in Nigeria's elections",
+      slug: "Exploring-the-rigging",
       description:
         " How credible are the opposition claims of fraud in Nigeria's presidential election?",
     },
@@ -19,6 +20,7 @@ const Africa = () => {
       id: 2,
       cover: img7,
       title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
+      slug: "Africa-live",
       description:
         "The Labour Party presidential candidate finished third in the poll - and more stories.",
     },
@@ -26,6 +28,7 @@ const Africa = () => {
       id: 3,
       cover: img4,
       title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
+      slug: "hallenge-nigeria-victory",
       description:
         "The Labour Party presidential candidate finished third in the poll - and more stories.",
     },
@@ -33,37 +36,11 @@ const Africa = () => {
       id: 4,
       cover: img5,
       title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
+      slug: "obi-plans",
       description:
         "The Labour Party presidential candidate finished third in the poll - and more stories.",
-    },
-    {
-      id: 5,
-      cover: img5,
-      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
-      description:
-        "The Labour Party presidential candidate finished third in the poll - and more stories.",
-    },
-    {
-      id: 5,
-      cover: img5,
-      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
-      description:
-        "The Labour Party presidential candidate finished third in the poll - and more stories.",
-    },
-    {
-      id: 5,
-      cover: img5,
-      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
-      description:
-        "The Labour Party presidential candidate finished third in the poll - and more stories.",
-    },
-    {
-      id: 5,
-      cover: img5,
-      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
-      description:
-        "The Labour Party presidential candidate finished third in the poll - and more stories.",
-    },
+    }
+  
   ];
   return (
     <div className="my-10">
@@ -82,6 +59,7 @@ const Africa = () => {
                   cover={news.cover}
                   title={news.title}
                   description={news.description}
+                  slug={news.slug}
                   key={index}
                 />
               </div>
