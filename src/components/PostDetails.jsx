@@ -5,19 +5,19 @@ import { BiTime } from "react-icons/bi";
 
 const PostDetails = () => {
   return (
-    <div className="">
+    <div className="divide-y">
       {/* Header */}
       <div>
         <h1 className="text-[30px] font-bold leading-10">
           Bahrain Grand Prix: Fernando Alonso edges out Red Bulls in practice
           but plays down pole hopes
         </h1>
-        <div className="flex gap-4 my-4 divide-x  text-sm text-gray-500">
+        <div className="flex gap-4 my-4  text-sm text-gray-500">
           <div className="flex items-center">
             <BiTime />
-            <p>19 minutes ago</p>
+            <p className="ml-1">19 minutes ago</p>
           </div>
-          <div className="">
+          <div className="border-l-[1px] pl-4">
             <p>African News</p>
           </div>
         </div>
@@ -25,7 +25,7 @@ const PostDetails = () => {
       <hr />
       {/* Body */}
       <div className="mt-5">
-        <div className="relative h-96 w-full  ">
+        <div className="relative md:h-96 h-64 w-full  ">
           <Image src={cover} alt="africa image" fill className="object-cover" />
         </div>
         <p className="my-2 font-bold">

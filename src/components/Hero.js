@@ -11,7 +11,7 @@ export const Hero = () => {
     <div className=''>
         <div className='grid md:grid-cols-4 md:gap-4 mt-6'>
           <div className='md:col-span-2 row-span-3 relative hover:opacity-90 bg-black cursor-pointer'>
-            <Image src={Img1} alt="image"/>
+            <Image src={Img5} alt="image"/>
             <div className='absolute bottom-0 p-3 text-white bg-gradient-to-t from-black '>
               <h1 className='text-[30px] font-semibold leading-7 mb-2'>Greek transport minister resigns after deadly train crash</h1>
               <p className='leading-6'>The prime minister of Greece, Kyriakos Mitsotakis, has begun an address to the nation about the train crash.</p>
