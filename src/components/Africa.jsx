@@ -1,47 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img6 from "../img/img6.jpg";
 import img7 from "../img/img7.png";
 import img5 from "../img/img5.jpg";
 import img4 from "../img/img4.jpg";
 import Link from "next/link";
 import { AfricaCards } from "./AfricaCards";
+import { db } from "../firebase";
+import { async } from "@firebase/util";
+import { getDoc, collection, getDocs, doc } from "firebase/firestore";
 
 const Africa = () => {
-  const africaNews = [
-    {
-      id: 1,
-      cover: img6,
-      title: "Exploring the rigging claims in Nigeria's elections",
-      slug: "Exploring-the-rigging",
-      description:
-        " How credible are the opposition claims of fraud in Nigeria's presidential election?",
-    },
-    {
-      id: 2,
-      cover: img7,
-      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
-      slug: "Africa-live",
-      description:
-        "The Labour Party presidential candidate finished third in the poll - and more stories.",
-    },
-    {
-      id: 3,
-      cover: img4,
-      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
-      slug: "hallenge-nigeria-victory",
-      description:
-        "The Labour Party presidential candidate finished third in the poll - and more stories.",
-    },
-    {
-      id: 4,
-      cover: img5,
-      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
-      slug: "obi-plans",
-      description:
-        "The Labour Party presidential candidate finished third in the poll - and more stories.",
+  const [posts, setPosts] = useState([])
+
+  const postsCollectionRef = collection(db, 'posts')
+
+  useEffect(()=>{
+    const getPosts = async () =>{
+      const data = await getDocs(postsCollectionRef)
+      // setPosts(data.docs.map((doc)=>{({ ...doc.data(), id: doc.id })}))
+      setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+
+
+      console.log(posts)
     }
+getPosts()
+  },[])
   
-  ];
   return (
     <div className="my-10">
       <Link
@@ -51,20 +35,17 @@ const Africa = () => {
         Africa News
       </Link>
       <div className="grid md:grid-cols-4 gap-4 mt-3">
-        {africaNews?.map((news, index) => {
-          if (index % 2 === 0) {
+        {posts?.map((news) => {
             return (
-              <div key={index}>
+              <div key={news.id}>
                 <AfricaCards
-                  cover={news.cover}
+                  cover={news.image}
                   title={news.title}
                   description={news.description}
-                  slug={news.slug}
-                  key={index}
                 />
+        
               </div>
             );
-          }
         })}
       </div>
     </div>

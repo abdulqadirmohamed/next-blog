@@ -6,15 +6,15 @@ export const AfricaCards = ({ cover, title, description, slug }) => {
   return (
     <div>
       <div className="relative h-80 group">
-        <Link href={slug} className="cursor-pointer">
+        <Link href={title} className="cursor-pointer">
           <div className="relative h-40 w-full group-hover:opacity-90">
-            <Image src={cover} fill className="object-cover" alt={title} />
+            <Image src={cover} fill className="object-cover"  alt={title} />
           </div>
           <div className="mt-1">
             <h1 className="text-[20px] text-gray-700 font-bold leading-6 ">
               {title}
             </h1>
-            <p className="text-gray-600 leading-5 mt-2 text-[15px]">
+            <p className="text-gray-600 leading-5 mt-2 text-[15px] line-clamp-3">
               {description}
             </p>
           </div>

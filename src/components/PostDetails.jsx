@@ -26,7 +26,7 @@ const PostDetails = () => {
       {/* Body */}
       <div className="mt-5">
         <div className="relative md:h-96 h-64 w-full  ">
-          <Image src={cover} alt="africa image" fill className="object-cover" />
+          <Image src={cover} alt="africa image" fill className="object-cover"  />
         </div>
         <p className="my-2 font-bold">
           Fernando Alonso has rejected the idea that he could start the Bahrain

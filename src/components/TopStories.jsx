@@ -26,8 +26,8 @@ const TopStories = () => {
   ];
   return (
     <div className="mt-5 w-full">
-      {africaNews.map((news) => (
-        <Link href="/">
+      {africaNews.map((news, index) => (
+        <Link href={news.slug} key={index}>
           <div className="text-lg font-medium w-full bg-gray-100 my-3 p-5 hover:underline hover:text-red-600">
             {news.title}
           </div>
