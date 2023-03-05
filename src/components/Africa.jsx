@@ -40,6 +40,7 @@ getPosts()
               <div key={news.id}>
                 <AfricaCards
                   cover={news.image}
+                  id={news.id}
                   title={news.title}
                   description={news.description}
                 />

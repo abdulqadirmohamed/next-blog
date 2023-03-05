@@ -1,20 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import img1 from '../img/img1.jpg'
 
-export const AfricaCards = ({ cover, title, description, slug }) => {
+export const AfricaCards = ({ id, cover, title, description, slug }) => {
   return (
     <div>
       <div className="relative h-80 group">
-        <Link href={title} className="cursor-pointer">
+        <Link href={id} className="cursor-pointer">
           <div className="relative h-40 w-full group-hover:opacity-90">
-            <Image src={cover} fill className="object-cover"  alt={title} />
+            <Image src={img1} fill className="object-cover"  alt={title} />
           </div>
           <div className="mt-1">
-            <h1 className="text-[20px] text-gray-700 font-bold leading-6 ">
+            <h1 className="text-[20px] text-gray-700 font-bold leading-6 line-clamp-3 ">
               {title}
             </h1>
-            <p className="text-gray-600 leading-5 mt-2 text-[15px] line-clamp-3">
+            <p className="text-gray-600 leading-5 mt-2 text-[15px] line-clamp-2">
               {description}
             </p>
           </div>
