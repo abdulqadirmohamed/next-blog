@@ -10,21 +10,38 @@
 
 
 .wrapper > div:nth-child(1){
-    border: 1px solid black;
     grid-column: 4 / 3;
     grid-column-start: 1;
     grid-row: 1 / 3;
 }
-.wrapper > div:nth-child(2){
+/* .wrapper > div:nth-child(2){
     border: 1px solid black;
    
+} */
+.wrapper > div:nth-child(2) .pragraph_hidden{
+    display: none;
 }
-.wrapper > div:nth-child(3){
-    border: 1px solid black;
+.wrapper > div:nth-child(3) .pragraph_hidden{
+    display: none;
 }
-.wrapper > div:nth-child(4){
-    border: 1px solid black;
+.wrapper > div:nth-child(4) .pragraph_hidden{
+    display: none;
 }
-.wrapper > div:nth-child(5){
-    border: 1px solid black;
+.wrapper > div:nth-child(5) .pragraph_hidden{
+    display: none;
+}
+
+
+/* Responsive */
+@media (max-width: 768px){
+    .wrapper{
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .wrapper > div:nth-child(2) .pragraph_hidden{
+        color: black;
+    }
+    .wrapper > div:nth-child(2) img{
+        display: none;
+    }
 }

@@ -7,9 +7,56 @@ import Img4 from "../img/img4.jpg";
 import Img5 from "../img/img5.jpg";
 
 export const Hero = () => {
+  const africaNews = [
+    {
+      id: 1,
+      cover: Img5,
+      title: "Exploring the rigging claims in Nigeria's elections",
+      slug: "Exploring-the-rigging",
+      description:
+        " How credible are the opposition claims of fraud in Nigeria's presidential election?",
+        tags: 'africa'
+    },
+    {
+      id: 2,
+      cover: Img2,
+      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
+      slug: "Africa-live",
+      description:
+        "The Labour Party presidential candidate finished third in the poll - and more stories.",
+        tags: 'science'
+    },
+    {
+      id: 3,
+      cover: Img3,
+      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
+      slug: "Africa-live",
+      description:
+        "The Labour Party presidential candidate finished third in the poll - and more stories.",
+        tags: 'Europe'
+    },
+    {
+      id: 3,
+      cover: Img4,
+      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
+      slug: "Africa-live",
+      description:
+        "The Labour Party presidential candidate finished third in the poll - and more stories.",
+        tags: 'Lating America'
+    },
+    {
+      id: 3,
+      cover: Img1,
+      title: "Africa Live: Obi plans to challenge Tinubu's Nigeria victory",
+      slug: "Africa-live",
+      description:
+        "The Labour Party presidential candidate finished third in the poll - and more stories.",
+        tags: 'africa'
+    },
+  ];
   return (
     <div className="gridCard">
-      <div className="grid md:grid-cols-4 md:gap-4 mt-6">
+      <div className="grid md:grid-cols-4 md:gap-4 mt-6 ">
         <div className="md:col-span-2 row-span-3 relative hover:opacity-90 bg-black cursor-pointer">
           <Image src={Img5} alt="image" width={500} height={500} />
           <div className="absolute bottom-0 p-3 text-white bg-gradient-to-t from-black ">
